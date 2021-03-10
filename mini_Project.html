@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>mini_Project</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="mini_Project.js">
+
+        </script>
+        <style>
+            body{
+                background-color: rgb(177, 143, 148);
+            }
+            #table_id{
+                font-family: sans-serif;
+            }
+            #vis1{
+                visibility: hidden;
+            }
+            .SA{
+                background-color: rgb(58, 58, 114);
+                font-size: large;
+                color: white;
+            }
+            .some{
+                font-size: xx-large;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <button class="btn btn-info bg-success mt-5" data-toggle="modal" data-target="#POPUP" style="margin-left: 90%;">+Add Task</button>
+            <table class="table table-striped table-lg mt-5" style="background-color: white;">
+                <thead id="fun">
+                    <tr class="SA">
+                        <th colspan="5"><span class="some">Sample</span> App</th>
+                    </tr>
+                    <tr style="font-size:medium;">
+                        <th >TaskName</th>
+                        <th >ExpiryDate</th>
+                        <th >Status</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody  id="table_Id">
+
+                </tbody>
+            </table>
+            <div class="form-group mt-5 forms" id="vis1">
+                <label>Enter Your Task Name: </label>
+                <input id="i1" type="text" class="form-control" placeholder="TaskName">
+                <label>Time:</label>
+                <input id="i2" type="text"class="form-control" placeholder="Time">
+                <label>status</label>
+                <input id="i3" type="text" class="form-control" placeholder="status"><br>
+                <button onclick="editTask()" class="btn btn-secondary" id="SC" data-dismiss="forms">Save Changes</button>
+            </div>
+        </div>
+        <!-- Modal   -->
+        <div class="modal" id="POPUP" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header" style="background-color: rgb(58, 58, 114); color:white">
+                  <h3 class="modal-title" id="exampleModalLabel"><b>Add Task</b></h3>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body form-group">
+                    <label>Name: </label>
+                    <input id="f1" type="text" class="form-control" placeholder="TaskName">
+                    <label>ExpiryDate:</label>
+                    <input id="f2" type="text"class="form-control" placeholder="Time">
+                    <label>Status</label>
+                    <input id="f3" type="text" class="form-control" placeholder="status">
+                </div>
+                <div class="modal-footer">
+                  <button onclick="addTask()" type="button" class="btn btn-info" data-dismiss="modal" style="background-color: rgb(58, 58, 114);color:white;">Add</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+    </body>
+</html>
